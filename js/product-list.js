@@ -1,5 +1,6 @@
 
 let productdiv = document.querySelector(".product-items-container");
+let categorylist = document.querySelector(".category");
 
 
 
@@ -8,12 +9,12 @@ let productdiv = document.querySelector(".product-items-container");
 
 
 let rawproduct = async () => {
-    let product = await fetch("https://fakestoreapi.com/products");
-    let finalproduct = await product.json();
-    console.log(finalproduct);
-    productdiv.innerHTML = "";
-    finalproduct.forEach(element => {
-        productdiv.innerHTML += `
+  let product = await fetch("https://fakestoreapi.com/products");
+  let finalproduct = await product.json();
+  console.log(finalproduct);
+  productdiv.innerHTML = "";
+  finalproduct.forEach((element) => {
+    productdiv.innerHTML += `
             <div class="product-div">
                 <img src=${element.image} alt="">
                 <span>${element.title}</span>
@@ -26,9 +27,8 @@ let rawproduct = async () => {
                         ${element.price + " Rs"}
                     </div>
                 </div>
-              </div>`
-    });
-}
-
+              </div>`;
+  });
+};
 
 rawproduct();

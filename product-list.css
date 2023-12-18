@@ -6,10 +6,26 @@
      
 }
 .product-filter{
+    position: relative;
     width: 25%;
     /* height: 100vh; */
-    padding: 5rem 0;
+    padding: 3rem 2rem;
 
+}
+.filter{
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+}
+.filter label{
+    display: block;
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+.filter .category input{
+    height: 2rem;
+    width: 1.7rem;
+    margin-right: 1rem;
 }
 
 
