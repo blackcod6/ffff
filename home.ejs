@@ -112,13 +112,14 @@
           <div class="inner-box" id="card">
             <div class="card-front">
               <h1>SIGN UP</h1>
-              <form action="/signup" method="post">
+              <form action="/signup" method="post" >
                 <img id="name" src="/name.png" alt="" />
                 <input
                   type="text"
                   class="input-box"
                   placeholder="Your Name"
                   name="myname"
+                  id="idname"
                   required
                 />
                 <img id="email" src="/mail-outline.svg" alt="" />
@@ -127,6 +128,8 @@
                   class="input-box"
                   placeholder="Email"
                   name="myemail"
+                  id="idEmail"
+                  onkeyup="valiemail()"
                   required
                 />
                 <img id="pass1" src="/lock-closed-outline.svg" alt="" />
@@ -135,6 +138,7 @@
                   class="input-box"
                   placeholder="Password"
                   name="mypassword"
+                  id="idpassword"
                   required
                 />
                 <img id="pass2" src="/lock-closed-outline.svg" alt="" />
@@ -143,22 +147,23 @@
                   class="input-box"
                   placeholder="Confirm Password"
                   name="myconfirmpassword"
+                  id="idconfirmpassword"
                   required
                 />
                 <label id="rem">
                   <input type="checkbox" /><span>Remember Me</span>
                 </label>
                 <a href="#" id="forgot">Forgot Password</a>
-                <button type="submit" class="sumbit-btn">Sumbit</button>
+                <button type="submit" class="sumbit-btn" onclick=" return validata()">Sumbit</button>
                 <span id="accountregister">Don't have a account </span>
-                <button type="button" class="btn" onclick="openlogin()">
+                <button type="button" class="btn" onclick="openlogin()" >
                   Log In
                 </button>
               </form>
             </div>
             <div class="card-back">
               <h1>LOGIN</h1>
-              <form action="/login" method="post">
+              <form action="/login"   method="post">
                 <img id="email" src="/mail-outline.svg" alt="" />
                 <input
                   type="email"
@@ -359,6 +364,6 @@
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-    <script src="login/script.js"></script>
+    <script src="js/loginscript.js"></script>
   </body>
 </html>
