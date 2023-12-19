@@ -32,17 +32,24 @@ let displayproduct = async (allcheckcat=[]) => {
 
 
       productdiv.innerHTML += ` <div class="product-div">
-                 <img src=${element.image} alt="">
-                <span>${element.title}</span>
-                <div class="rating-price">
-                <div class="rating">
-                        <i class="ri-star-fill"></i><i   class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                    </div>
+                                  <img src=${element.image} alt="">
+                                  <span>${element.title}</span>
+                                    <div class="rating-price">
+                                        <div class="rating">
+                                          <i class="ri-star-fill"></i><i   class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                        </div>
+                                       
                   
-                   <div class="product-div-price">
-                        ${element.price + " Rs"}
-                    </div>                </div>
-             </div>`;
+                                        <div class="product-div-price">
+                                        ${element.price + " Rs"}
+                                        </div>   
+                                        </div>
+                                        <div class="cart-like">
+                                        <i class="ri-heart-line"></i>
+                                        <i class="ri-shopping-cart-2-fill"></i>
+                                        </div>
+                                    
+                                </div>`;
       
       
     }
